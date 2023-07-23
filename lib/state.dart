@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:evalaton/home.dart';
+import 'package:evalaton/questions_screen.dart';
 
 class StateHandler extends StatefulWidget {
   const StateHandler({super.key});
@@ -12,6 +13,20 @@ class StateHandler extends StatefulWidget {
 }
 
 class _AppState extends State<StateHandler> {
+  Widget? activeScreen;
+
+  @override
+  void initState() {
+    super.initState();
+    activeScreen = HomeScreen(switchScreen);
+  }
+
+  void switchScreen() {
+    setState(() {
+      activeScreen = const QuestScreen();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +42,7 @@ class _AppState extends State<StateHandler> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: const HomeScreen(),
+          child: activeScreen,
         ),
       ),
     );

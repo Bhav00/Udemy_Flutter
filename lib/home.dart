@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+// import 'package:evalaton/state.dart';
+
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen(this.screenSwitcher, {super.key});
+
+  final void Function() screenSwitcher;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 50),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: screenSwitcher,
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
               minimumSize: const Size(150, 45),
