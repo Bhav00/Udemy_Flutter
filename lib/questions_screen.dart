@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'package:evalaton/ui/customs.dart';
+import 'package:evalaton/data/questions.dart';
+import 'package:evalaton/models/questions_blueprint.dart';
+
+const List<Question> qns = questions;
+var i = 0;
+
 class QuestScreen extends StatefulWidget {
   const QuestScreen({super.key});
 
@@ -12,17 +19,6 @@ class QuestScreen extends StatefulWidget {
 class _QuestScreen extends State<QuestScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Column(
-      children: [
-        Text(
-          "data",
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.white,
-          ),
-        ),
-      ],
-    ));
+    return QuestionsUI(qns[i]);
   }
 }
