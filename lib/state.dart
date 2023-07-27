@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:evalaton/home.dart';
 import 'package:evalaton/questions_screen.dart';
+import 'package:evalaton/data/questions.dart';
+import 'package:evalaton/result.dart';
 
 class StateHandler extends StatefulWidget {
   const StateHandler({super.key});
@@ -14,6 +16,7 @@ class StateHandler extends StatefulWidget {
 
 class _AppState extends State<StateHandler> {
   Widget? activeScreen;
+  List<String> selectedAns = [];
 
   @override
   void initState() {
@@ -23,7 +26,24 @@ class _AppState extends State<StateHandler> {
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestScreen();
+      activeScreen = QuestScreen(selectAnswer: chooseAnswer);
+    });
+  }
+
+  void chooseAnswer(String ans) {
+    selectedAns.add(ans);
+    if (selectedAns.length == questions.length) {
+      setState(() {
+        activeScreen = ResultScreen(homeSwitch, selectedAns);
+        // activeScreen = HomeScreen(switchScreen);
+      });
+    }
+  }
+
+  void homeSwitch() {
+    setState(() {
+      selectedAns = [];
+      activeScreen = HomeScreen(switchScreen);
     });
   }
 

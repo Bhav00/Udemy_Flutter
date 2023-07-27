@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:evalaton/state.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,11 +19,13 @@ class HomeScreen extends StatelessWidget {
             color: const Color.fromARGB(128, 255, 255, 255),
           ),
           const SizedBox(height: 50),
-          const Text(
-            "Some txt here is printed",
-            style: TextStyle(
-              fontSize: 18,
-              color: Color.fromARGB(255, 255, 255, 255),
+          Text(
+            "okayyyy lesss gooooo!!!",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.sourceSansPro(
+              fontSize: 20,
+              color: const Color.fromARGB(234, 255, 255, 255),
+              fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 50),
@@ -33,7 +35,7 @@ class HomeScreen extends StatelessWidget {
               foregroundColor: Colors.white,
               minimumSize: const Size(150, 45),
             ),
-            child: const Text("data"),
+            child: const Text("QUIZ TIME"),
           )
         ],
       ),
