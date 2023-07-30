@@ -1,4 +1,4 @@
-import 'package:evalaton/models/questions_blueprint.dart';
+import 'package:evalaton/quiz_app/models/questions_class.dart';
 
 const questions = [
   Question(

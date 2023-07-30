@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:evalaton/home.dart';
-import 'package:evalaton/questions_screen.dart';
-import 'package:evalaton/data/questions.dart';
-import 'package:evalaton/result.dart';
+import 'package:evalaton/quiz_app/home.dart';
+import 'package:evalaton/quiz_app/questions_screen.dart';
+import 'package:evalaton/quiz_app/data/questions.dart';
+import 'package:evalaton/quiz_app/result.dart';
 
 class StateHandler extends StatefulWidget {
   const StateHandler({super.key});

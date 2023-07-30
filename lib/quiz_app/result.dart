@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:evalaton/data/questions.dart';
-import 'package:evalaton/ui/customs.dart';
+import 'package:evalaton/quiz_app/data/questions.dart';
+import 'package:evalaton/quiz_app/ui/customs.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen(this.home, this.answers, {super.key});

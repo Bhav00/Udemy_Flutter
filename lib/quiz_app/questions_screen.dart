@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:evalaton/ui/customs.dart';
-import 'package:evalaton/data/questions.dart';
+import 'package:evalaton/quiz_app/ui/customs.dart';
+import 'package:evalaton/quiz_app/data/questions.dart';
 
 class QuestScreen extends StatefulWidget {
   const QuestScreen({super.key, required this.selectAnswer});
