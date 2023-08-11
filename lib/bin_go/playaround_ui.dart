@@ -1,9 +1,10 @@
-// import 'package:evalaton/cust_buttons.dart';
-import 'package:evalaton/stuff.dart';
-
 import 'package:flutter/material.dart';
 // import 'dart:math';
 
+import 'package:evalaton/bin_go/button_component.dart';
+// import 'package:evalaton/try_new_stuff/stuff.dart';
+
+//  This is basically to try new things in UI changes
 class Thing extends StatelessWidget {
   const Thing({super.key});
 
@@ -28,7 +29,7 @@ class Thing extends StatelessWidget {
                 "Score: $score",
                 style: const TextStyle(fontSize: 20),
               ),
-              const CustomButt(value: 0),
+              const CustButt(value: 0),
             ],
           ),
         ),
