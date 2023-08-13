@@ -1,5 +1,5 @@
-import 'package:evalaton/_static_ui_generators/active_button.dart';
-import 'package:evalaton/_static_ui_generators/in_active_button.dart';
+import 'package:evalaton/_static_ui/active_button.dart';
+import 'package:evalaton/_static_ui/in_active_button.dart';
 import 'package:flutter/material.dart';
 
 class CustButt extends StatefulWidget {

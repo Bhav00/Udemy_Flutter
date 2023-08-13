@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'dart:math';
 
 import 'package:evalaton/bin_go/button_component.dart';
-// import 'package:evalaton/try_new_stuff/stuff.dart';
+import 'package:evalaton/bin_go/random_matrix.dart';
+
+var obj = RandMat();
 
 //  This is basically to try new things in UI changes
 class Thing extends StatelessWidget {
@@ -10,7 +11,9 @@ class Thing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var score = 5;
+    var score = "MEH";
+    var mat = obj.getMat();
+    debugPrint(obj.listprinter());
     return Scaffold(
       // body: some Function that returns all that is below,
       body: Container(
@@ -37,3 +40,11 @@ class Thing extends StatelessWidget {
     );
   }
 }
+
+// ...ques.shuffledAnswers().map((ans) {
+//               return AnswerButton(
+//                 ans,
+//                 () {
+//                   answerQuestion(ans);
+//                 },
+//               );
